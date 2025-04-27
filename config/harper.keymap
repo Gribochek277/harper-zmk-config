@@ -36,15 +36,6 @@
 &mt { quick_tap_ms = <200>; };
 
 / {
-    macros {
-        telegram: telegram {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LALT &kp>;
-            label = "TELEGRAM";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -91,12 +82,12 @@
 
         adjust_layer {
             bindings = <
-&out OUT_BLE       &bt BT_SEL 0                     &bt BT_SEL 1                       &bt BT_SEL 2                      &bt BT_CLR                       &out OUT_USB                             &none                   &none        &none          &none         &none  &none
-&rgb_ug RGB_TOG    &rgb_ug RGB_BRD                  &rgb_ug RGB_BRI                    &rgb_ug RGB_SPD                   &rgb_ug RGB_SPI                  &rgb_ug RGB_EFF                          &none                   &none        &none          &none         &none  &none
-&ext_power EP_TOG  &rgb_ug RGB_COLOR_HSB(0,100,50)  &rgb_ug RGB_COLOR_HSB(218,100,50)  &rgb_ug RGB_COLOR_HSB(120,97,50)  &rgb_ug RGB_COLOR_HSB(60,0,100)  &rgb_ug RGB_COLOR_HSB(64,100,52)         &kp LEFT_ARROW          &kp DOWN     &kp UP_ARROW   &kp RIGHT     &none  &none
-&sys_reset         &bootloader                      &bl BL_OFF                         &none                             &none                            &none                                    &none                   &none        &none          &none         &none  &none
-&none              &none                            &kp LCTRL                          &kp LGUI                          &kp LALT                         &mo 3                             &mo 2  &kp LA(C_AC_FAVORITES)  &kp LA(F12)  &kp C_AL_MAIL  &kp LA(HOME)  &mo 3  &mo 1  &kp RALT
-                                                                                                                                                                                                   &kp RGUI                                                                        &kp RCTRL
+&out OUT_BLE       &bt BT_SEL 0                     &bt BT_SEL 1                       &bt BT_SEL 2                      &bt BT_CLR                       &out OUT_USB                             &none                   &none        &none           &none         &none  &none
+&rgb_ug RGB_TOG    &rgb_ug RGB_BRD                  &rgb_ug RGB_BRI                    &rgb_ug RGB_SPD                   &rgb_ug RGB_SPI                  &rgb_ug RGB_EFF                          &none                   &none        &none           &none         &none  &none
+&ext_power EP_TOG  &rgb_ug RGB_COLOR_HSB(0,100,50)  &rgb_ug RGB_COLOR_HSB(218,100,50)  &rgb_ug RGB_COLOR_HSB(120,97,50)  &rgb_ug RGB_COLOR_HSB(60,0,100)  &rgb_ug RGB_COLOR_HSB(64,100,52)         &kp LEFT_ARROW          &kp DOWN     &kp UP_ARROW    &kp RIGHT     &none  &none
+&sys_reset         &bootloader                      &bl BL_OFF                         &none                             &none                            &none                                    &none                   &none        &none           &none         &none  &none
+&none              &none                            &kp LCTRL                          &kp LGUI                          &kp LALT                         &mo 3                             &mo 2  &kp LA(C_AC_FAVORITES)  &kp LA(F12)  &kp C_AL_EMAIL  &kp LA(HOME)  &mo 3  &mo 1  &kp RALT
+                                                                                                                                                                                                   &kp RGUI                                                                         &kp RCTRL
             >;
 
             sensor-bindings =
